@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '3 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Sobriety Garden"
+  description="Política de privacidad de Sobriety Garden, tracker de recovery con jardín gamificado."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Sobriety Garden"
+    appSlug="sobriety-garden"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Sobriety Garden</strong> (desarrollada por mastersuaw) trata la
+      información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Sobriety Garden (Quit Drinking: Sobriety Garden)<br />
+      Identificador: com.sobrietygarden.app
+    </p>
+
+    <h2>2. Datos almacenados en tu dispositivo</h2>
+    <p>
+      Sobriety Garden es un tracker de recovery <strong>offline-first</strong>. La aplicación guarda
+      localmente en tu dispositivo con SQLite (Drift):
+    </p>
+    <ul>
+      <li>Perfil de recovery (sustancia, fecha de inicio, gasto semanal, moneda)</li>
+      <li>Plantas del jardín y etapas de crecimiento</li>
+      <li>Check-ins diarios y notas de ánimo</li>
+      <li>Eventos de tropiezo o recaída y notas opcionales del journal</li>
+      <li>Estado de racha y uso de freezes</li>
+      <li>Preferencias de la app (tema, recordatorios)</li>
+    </ul>
+    <p>
+      <strong>No subimos estos datos a nuestros servidores</strong> en la versión actual. No requerimos
+      cuenta ni registro.
+    </p>
+
+    <h2>3. Sin sincronización en la nube obligatoria</h2>
+    <p>
+      La aplicación funciona completamente offline. Tus datos permanecen en tu dispositivo salvo que
+      los exportes explícitamente.
+    </p>
+
+    <h2>4. Suscripciones (RevenueCat)</h2>
+    <p>
+      Si compras <strong>Sobriety Garden Pro</strong>, el pago lo procesan Apple App Store o Google
+      Play. RevenueCat valida los recibos de compra para desbloquear Pro. Recibimos el estado de
+      suscripción, no datos de tarjeta. Consulta la
+      <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">
+        política de privacidad de RevenueCat
+      </a>.
+    </p>
+
+    <h2>5. Analytics</h2>
+    <p>
+      La versión actual no utiliza analytics de terceros activos por defecto. Si se habilitan en una
+      actualización futura, serán eventos anónimos (sin información personal identificable) y podrás
+      desactivarlos en Ajustes.
+    </p>
+
+    <h2>6. Notificaciones locales</h2>
+    <p>
+      Los recordatorios de check-in usan notificaciones locales únicamente. No interviene ningún
+      servidor.
+    </p>
+
+    <h2>7. Exportación de datos</h2>
+    <p>
+      Los usuarios Pro pueden exportar sus datos en CSV desde Ajustes. Los archivos exportados quedan
+      bajo tu control en el dispositivo.
+    </p>
+
+    <h2>8. Widget de inicio</h2>
+    <p>
+      El widget muestra días de racha y etapa de planta desde datos locales. No requiere conexión a
+      red.
+    </p>
+
+    <h2>9. Solicitud de reseña in-app</h2>
+    <p>
+      La aplicación puede solicitar una reseña en App Store o Play tras tu primer check-in exitoso,
+      usando la API nativa de la plataforma. No enviamos datos personales.
+    </p>
+
+    <h2>10. Privacidad de menores</h2>
+    <p>
+      Sobriety Garden no está dirigida a menores de 13 años. No recopilamos datos de menores de forma
+      consciente.
+    </p>
+
+    <h2>11. Aviso médico</h2>
+    <p>
+      <strong>Sobriety Garden es una herramienta de autoayuda.</strong> No ofrece consejo médico,
+      diagnóstico ni tratamiento. No sustituye tratamiento profesional. Si estás en crisis o
+      necesitas ayuda médica, contacta a un profesional de salud o servicios de emergencia de
+      inmediato.
+    </p>
+
+    <h2>12. Retención y eliminación de datos</h2>
+    <p>
+      Desinstalar la aplicación elimina los datos SQLite locales. Para borrar antes de desinstalar,
+      puedes exportar tus datos (Pro) o borrar los datos de la app en los ajustes del sistema.
+    </p>
+
+    <h2>13. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se indica
+      al inicio de este documento.
+    </p>
+
+    <h2>14. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, escribe a
+      <a href="mailto:support@sobrietygarden.app">support@sobrietygarden.app</a> o visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/sobriety-garden/soporte`}>soporte de Sobriety Garden</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '3 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Sobriety Garden"
+  description="Términos y condiciones de uso de Sobriety Garden."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Sobriety Garden"
+    appSlug="sobriety-garden"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Sobriety Garden</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Sobriety Garden es una aplicación de seguimiento de recovery con un jardín gamificado. Permite
+      registrar check-ins diarios, cultivar plantas según tu progreso, gestionar tropiezos y acceder a
+      herramientas de apoyo. El servicio se proporciona "tal cual" para uso personal.
+    </p>
+
+    <h2>2. Aviso médico</h2>
+    <p>
+      <strong>Sobriety Garden no es un dispositivo médico ni un servicio de salud.</strong> Es una
+      herramienta de autoayuda que no ofrece consejo médico, diagnóstico ni tratamiento. No sustituye
+      la atención de profesionales de salud, terapeutas ni programas de tratamiento. Si estás en
+      crisis o necesitas ayuda inmediata, contacta a un profesional de salud o servicios de
+      emergencia.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>
+      Puedes utilizar la aplicación para apoyar tu proceso personal de recovery. No está permitido:
+    </p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+      <li>Presentar la app como sustituto de tratamiento médico o terapéutico profesional</li>
+    </ul>
+
+    <h2>4. Suscripciones Pro</h2>
+    <p>
+      Sobriety Garden ofrece funciones gratuitas y una suscripción Pro opcional. Los pagos se procesan
+      a través de Apple App Store o Google Play. Las condiciones de facturación, renovación y
+      cancelación se rigen por las políticas de la tienda correspondiente. Puedes restaurar compras
+      desde Ajustes.
+    </p>
+
+    <h2>5. Propiedad intelectual</h2>
+    <p>
+      Sobriety Garden, su diseño, código, ilustraciones del jardín y contenido son propiedad de
+      mastersuaw.
+    </p>
+
+    <h2>6. Datos y responsabilidad</h2>
+    <p>
+      Tus datos de recovery se almacenan localmente en tu dispositivo. Eres responsable de hacer
+      copias de seguridad si lo consideras necesario (por ejemplo, exportando CSV con Pro). El
+      desarrollador no garantiza la recuperación de datos perdidos por fallos del dispositivo o
+      desinstalación.
+    </p>
+
+    <h2>7. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      resultados específicos en tu proceso de recovery ni que el servicio esté libre de errores o
+      interrupciones.
+    </p>
+
+    <h2>8. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, mastersuaw no será responsable por daños indirectos,
+      incidentales o consecuentes derivados del uso de la aplicación, incluidos daños relacionados con
+      decisiones de salud tomadas con base en la app.
+    </p>
+
+    <h2>9. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos o la aplicación en cualquier momento. El uso continuado tras
+      los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/sobriety-garden/soporte`}>soporte</a> o escribe a
+      <a href="mailto:support@sobrietygarden.app">support@sobrietygarden.app</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

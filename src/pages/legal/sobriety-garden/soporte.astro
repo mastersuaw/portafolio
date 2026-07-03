@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '3 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Sobriety Garden"
+  description="Soporte y contacto para Sobriety Garden."
+>
+  <LegalContent title="Soporte" appName="Sobriety Garden" appSlug="sobriety-garden" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Sobriety Garden? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Sobriety Garden (Quit Drinking: Sobriety Garden)</li>
+      <li><strong>Versión:</strong> 0.1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> com.sobrietygarden.app</li>
+      <li><strong>Plataformas:</strong> iOS, Android</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:support@sobrietygarden.app">support@sobrietygarden.app</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/mastersuaw/sobrietygarden/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>
+      No. Sobriety Garden funciona sin registro. Todos los datos de recovery se guardan localmente en
+      tu dispositivo.
+    </p>
+
+    <h3>¿La app funciona sin internet?</h3>
+    <p>
+      Sí. Es offline-first: check-ins, jardín, rachas y herramientas funcionan sin conexión. Solo
+      las compras Pro requieren acceso a la tienda.
+    </p>
+
+    <h3>¿Qué incluye Sobriety Garden Pro?</h3>
+    <p>
+      Pro desbloquea freezes ilimitados, journal y reflexiones, exportación CSV, todos los milestones
+      de salud y temas premium. Incluye prueba gratuita de 7 días en el plan mensual.
+    </p>
+
+    <h3>¿Qué pasa si tengo un tropiezo?</h3>
+    <p>
+      Recovery no es lineal. Puedes registrar un tropiezo o recaída con empatía: tus plantas
+      anteriores permanecen en el jardín y se planta una nueva semilla para retomar el camino.
+    </p>
+
+    <h3>¿Es un servicio médico?</h3>
+    <p>
+      No. Sobriety Garden es una herramienta de autoayuda. No sustituye tratamiento profesional. Si
+      estás en crisis, contacta a un profesional de salud o servicios de emergencia.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/sobriety-garden/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/sobriety-garden/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

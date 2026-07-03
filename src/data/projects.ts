@@ -146,6 +146,49 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'sobriety-garden',
+    name: 'Sobriety Garden',
+    tagline: 'Recovery no es lineal. Tu jardín guarda cada intento.',
+    description:
+      'Tracker de sobriedad offline-first con jardín gamificado para iOS y Android. Registra check-ins diarios, cultiva plantas con tu progreso, gestiona tropiezos con empatía y consulta herramientas para momentos de impulso. Los datos se guardan localmente en el dispositivo.',
+    bundleId: 'com.sobrietygarden.app',
+    version: '0.1.0',
+    platforms: ['iOS', 'Android'],
+    icon: `${BASE}images/apps/sobriety-garden.png`,
+    features: [
+      'Jardín gamificado: plantas que crecen con tu racha de sobriedad',
+      'Check-ins diarios, notas de ánimo y seguimiento de racha con freezes',
+      'Registro empático de tropiezos y recaídas con nueva semilla en el jardín',
+      'Urge toolkit para atravesar momentos de impulso',
+      'Calculadora de ahorro según gasto semanal estimado',
+      'Widget de inicio con días de racha y etapa de planta',
+      'Recordatorios locales de check-in',
+      'Sobriety Garden Pro: journal, export CSV, freezes ilimitados y temas premium',
+      'Sin cuenta ni login; datos locales en SQLite (offline-first)',
+      'Disponible en español e inglés',
+    ],
+    stack: ['Flutter', 'Dart', 'Riverpod', 'Drift', 'SQLite', 'RevenueCat'],
+    repoUrl: 'https://github.com/mastersuaw/sobrietygarden',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/sobriety-garden/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/sobriety-garden/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/sobriety-garden/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
