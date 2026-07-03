@@ -2,7 +2,7 @@
 
 Sitio web estático del desarrollador **mastersuaw**. Portfolio de aplicaciones y sitios web, con páginas legales para publicación en App Store y Google Play.
 
-**URL en producción:** `https://mastersuaw.github.io/app/`
+**URL en producción:** `https://mastersuaw.github.io/portafolio/`
 
 ## Proyectos incluidos
 
@@ -17,14 +17,14 @@ npm install
 npm run dev
 ```
 
-Abre [http://localhost:4321/app/](http://localhost:4321/app/)
+Abre [http://localhost:4321/portafolio/](http://localhost:4321/portafolio/)
 
 ## Build y despliegue en GitHub Pages
 
-1. Asegúrate de que `base` en `astro.config.mjs` coincida con el nombre del repositorio en GitHub (`/app`).
+1. Asegúrate de que `base` en `astro.config.mjs` coincida con el nombre del repositorio en GitHub (`/portafolio`).
 2. En GitHub: **Settings → Pages → Source: GitHub Actions**.
 3. Cada push a `main` ejecuta el workflow `.github/workflows/deploy.yml`, que compila el sitio y lo publica automáticamente.
-4. El sitio estará disponible en `https://mastersuaw.github.io/app/`.
+4. El sitio estará disponible en `https://mastersuaw.github.io/portafolio/`.
 
 Para compilar localmente:
 
