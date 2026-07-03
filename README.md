@@ -2,7 +2,7 @@
 
 Sitio web estático del desarrollador **mastersuaw**. Portfolio de aplicaciones y sitios web, con páginas legales para publicación en App Store y Google Play.
 
-**URL en producción:** `https://mastersuaw.github.io/mastersuaw-portfolio/`
+**URL en producción:** `https://mastersuaw.github.io/app/`
 
 ## Proyectos incluidos
 
@@ -17,22 +17,22 @@ npm install
 npm run dev
 ```
 
-Abre [http://localhost:4321/mastersuaw-portfolio/](http://localhost:4321/mastersuaw-portfolio/)
+Abre [http://localhost:4321/app/](http://localhost:4321/app/)
 
 ## Build y despliegue en GitHub Pages
 
-1. Asegúrate de que `base` en `astro.config.mjs` coincida con el nombre del repositorio en GitHub (`/mastersuaw-portfolio`).
-2. Genera el sitio estático:
+1. Asegúrate de que `base` en `astro.config.mjs` coincida con el nombre del repositorio en GitHub (`/app`).
+2. En GitHub: **Settings → Pages → Source: GitHub Actions**.
+3. Cada push a `main` ejecuta el workflow `.github/workflows/deploy.yml`, que compila el sitio y lo publica automáticamente.
+4. El sitio estará disponible en `https://mastersuaw.github.io/app/`.
+
+Para compilar localmente:
 
 ```bash
 npm run build
 ```
 
-Esto crea la carpeta `docs/` con los archivos listos para GitHub Pages.
-
-3. Sube el repositorio a GitHub (incluyendo la carpeta `docs/`).
-4. En GitHub: **Settings → Pages → Source: Deploy from branch `main` → Folder `/docs`**.
-5. El sitio estará disponible en `https://mastersuaw.github.io/mastersuaw-portfolio/`.
+Esto crea la carpeta `docs/` con los archivos estáticos.
 
 ## Agregar una nueva app
 
