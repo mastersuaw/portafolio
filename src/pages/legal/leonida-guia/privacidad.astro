@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '2 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Leonida Guia"
+  description="Política de privacidad de Leonida Guia, guía no oficial de GTA VI."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Leonida Guia"
+    appSlug="leonida-guia"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Leonida Guia</strong> (desarrollada por mastersuaw) trata la
+      información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Leonida Guia<br />
+      Identificador: com.leonidaguide.app
+    </p>
+
+    <h2>2. Naturaleza de la aplicación</h2>
+    <p>
+      Leonida Guia es una <strong>guía no oficial</strong> de contenido relacionado con el videojuego
+      GTA VI. No está afiliada, respaldada ni patrocinada por Rockstar Games, Take-Two Interactive
+      ni sus filiales.
+    </p>
+
+    <h2>3. Datos que recopilamos</h2>
+    <p>La aplicación puede recopilar y almacenar:</p>
+    <ul>
+      <li>
+        <strong>Progreso local:</strong> misiones completadas, coleccionables marcados y preferencias
+        de la app, almacenados en tu dispositivo
+      </li>
+      <li>
+        <strong>Datos de uso anónimos:</strong> si se habilitan servicios de analítica en el futuro,
+        se actualizará esta política
+      </li>
+    </ul>
+
+    <h2>4. Servicios de terceros</h2>
+    <p>
+      Leonida Guia utiliza <strong>Supabase</strong> para obtener contenido de la guía (misiones,
+      puntos del mapa, etc.). Al consultar el contenido, tu dispositivo se conecta a los servidores
+      de Supabase. Consulta la
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer"
+        >política de privacidad de Supabase</a
+      > para más información.
+    </p>
+    <p>
+      No recopilamos nombre, correo electrónico ni datos de identificación personal a menos que
+      contactes voluntariamente al soporte.
+    </p>
+
+    <h2>5. Datos que no recopilamos</h2>
+    <ul>
+      <li>No vendemos datos personales a terceros</li>
+      <li>No requerimos cuenta para usar las funciones principales de la guía</li>
+      <li>No accedemos a tu ubicación GPS en tiempo real</li>
+    </ul>
+
+    <h2>6. Modo offline</h2>
+    <p>
+      El contenido descargado para uso offline se almacena en tu dispositivo. Puedes eliminarlo
+      desinstalando la aplicación.
+    </p>
+
+    <h2>7. Menores de edad</h2>
+    <p>
+      Leonida Guia trata contenido de un videojuego clasificado para audiencias maduras. Los padres o
+      tutores deben supervisar el uso por menores.
+    </p>
+
+    <h2>8. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se indica
+      al inicio de este documento.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/leonida-guia/soporte`}>soporte de Leonida Guia</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

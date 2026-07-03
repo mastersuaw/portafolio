@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '2 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Anote Domino"
+  description="Soporte y contacto para Anote Domino."
+>
+  <LegalContent title="Soporte" appName="Anote Domino" appSlug="anote-domino" updated={updated}>
+    <p>¿Necesitas ayuda con Anote Domino? Aquí encontrarás las formas de contacto y recursos útiles.</p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Anote Domino</li>
+      <li><strong>Versión:</strong> 1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> com.mastersuaw.anotedomino</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:soporte.anotedomino@mastersuaw.dev">soporte.anotedomino@mastersuaw.dev</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/mastersuaw/anotedomino/issues" target="_blank" rel="noopener noreferrer">
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>No. Anote Domino funciona sin registro. Todos los datos se guardan en tu dispositivo.</p>
+
+    <h3>¿Cómo recupero mis partidas?</h3>
+    <p>
+      Las partidas se almacenan localmente. Si cambias de dispositivo, deberás exportar o compartir
+      los resultados manualmente antes de migrar.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/anote-domino/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/anote-domino/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

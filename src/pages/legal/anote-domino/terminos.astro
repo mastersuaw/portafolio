@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '2 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Anote Domino"
+  description="Términos y condiciones de uso de Anote Domino."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Anote Domino"
+    appSlug="anote-domino"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Anote Domino</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Anote Domino es una aplicación de marcador para partidas de dominó que permite registrar
+      puntuaciones, gestionar equipos y consultar historial. El servicio se proporciona "tal cual"
+      para uso personal y recreativo.
+    </p>
+
+    <h2>2. Uso permitido</h2>
+    <p>Puedes utilizar la aplicación para llevar el marcador de tus partidas de dominó de forma personal. No está permitido:</p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+    </ul>
+
+    <h2>3. Propiedad intelectual</h2>
+    <p>
+      Anote Domino, su diseño, código y contenido son propiedad de mastersuaw. El dominó como juego
+      tradicional no es propiedad del desarrollador.
+    </p>
+
+    <h2>4. Datos y responsabilidad</h2>
+    <p>
+      Los datos de tus partidas se almacenan localmente en tu dispositivo. Eres responsable de hacer
+      copias de seguridad si lo consideras necesario. El desarrollador no garantiza la recuperación
+      de datos perdidos por fallos del dispositivo o desinstalación.
+    </p>
+
+    <h2>5. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      que el servicio esté libre de errores o interrupciones.
+    </p>
+
+    <h2>6. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, mastersuaw no será responsable por daños indirectos,
+      incidentales o consecuentes derivados del uso de la aplicación.
+    </p>
+
+    <h2>7. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos o la aplicación en cualquier momento. El uso continuado
+      tras los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>8. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/anote-domino/soporte`}>soporte</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

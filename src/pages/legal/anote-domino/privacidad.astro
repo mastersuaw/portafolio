@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '2 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Anote Domino"
+  description="Política de privacidad de Anote Domino, marcador de dominó para iOS y Android."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Anote Domino"
+    appSlug="anote-domino"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Anote Domino</strong> (desarrollada por mastersuaw) trata la
+      información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Anote Domino<br />
+      Identificador: com.mastersuaw.anotedomino
+    </p>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>
+      Anote Domino <strong>no requiere cuenta ni registro</strong>. La aplicación almacena
+      localmente en tu dispositivo:
+    </p>
+    <ul>
+      <li>Partidas, puntuaciones y configuración de equipos</li>
+      <li>Historial y estadísticas de partidas</li>
+      <li>Preferencias de la app (modo oscuro, sonidos, etc.)</li>
+    </ul>
+    <p>
+      Estos datos permanecen en tu dispositivo y no se transmiten a servidores propios del
+      desarrollador.
+    </p>
+
+    <h2>3. Datos que no recopilamos</h2>
+    <ul>
+      <li>No recopilamos nombre, correo electrónico ni datos de identificación personal</li>
+      <li>No utilizamos servicios de analítica de terceros integrados en la app</li>
+      <li>No vendemos ni compartimos datos personales con terceros</li>
+    </ul>
+
+    <h2>4. Compartir resultados</h2>
+    <p>
+      Si eliges compartir un resultado (por ejemplo, vía WhatsApp o guardando una imagen), esa
+      acción la realizas tú de forma voluntaria a través de las funciones del sistema operativo. El
+      desarrollador no tiene acceso a esas comunicaciones.
+    </p>
+
+    <h2>5. Seguridad y retención</h2>
+    <p>
+      Los datos se guardan en el almacenamiento local del dispositivo. Si desinstalas la aplicación,
+      los datos almacenados por la app se eliminan junto con ella, salvo copias de seguridad que
+      gestione tu sistema operativo.
+    </p>
+
+    <h2>6. Menores de edad</h2>
+    <p>
+      Anote Domino no está dirigida específicamente a menores, pero no recopila datos personales de
+      ningún usuario.
+    </p>
+
+    <h2>7. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se
+      indica al inicio de este documento.
+    </p>
+
+    <h2>8. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/anote-domino/soporte`}>soporte de Anote Domino</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

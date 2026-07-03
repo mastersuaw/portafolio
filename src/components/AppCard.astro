@@ -1,0 +1,33 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const appUrl = `${base}apps/${project.slug}`;
+---
+
+<a href={appUrl} class="app-card">
+  <img
+    class="app-card-pattern"
+    src={`${base}images/card-pattern.svg`}
+    alt=""
+    width="120"
+    height="120"
+    aria-hidden="true"
+  />
+  <div class="app-card-header">
+    <img class="app-icon" src={project.icon} alt={`Icono de ${project.name}`} width="64" height="64" />
+    <div>
+      <h3>{project.name}</h3>
+      <p class="app-card-tagline">{project.tagline}</p>
+    </div>
+  </div>
+  <p class="app-card-description">{project.description}</p>
+  <div class="app-card-footer">
+    <span class="btn btn-outline">Ver app</span>
+  </div>
+</a>

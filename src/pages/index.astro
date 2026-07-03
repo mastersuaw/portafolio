@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import AppCard from '../components/AppCard.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout
+  title="mastersuaw"
+  description="mastersuaw — Creador de apps y sitios web. Portfolio de Anote Domino, Creatitek y Leonida Guia."
+>
+  <Hero />
+  <section class="section" id="proyectos">
+    <div class="container">
+      <h2 class="section-title">Proyectos</h2>
+      <p class="section-subtitle">Aplicaciones y sitios web desarrollados por mastersuaw.</p>
+      <div class="projects-grid">
+        {projects.map((project) => <AppCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

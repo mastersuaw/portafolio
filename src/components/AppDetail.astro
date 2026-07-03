@@ -1,0 +1,84 @@
+---
+import type { Project } from '../data/projects';
+import StoreButtons from './StoreButtons.astro';
+import LegalLinks from './LegalLinks.astro';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<section class="app-detail">
+  <div class="container">
+    <a href={base} class="back-link">&larr; Volver al inicio</a>
+
+    <div class="app-detail-header">
+      <img
+        class="app-detail-icon"
+        src={project.icon}
+        alt={`Icono de ${project.name}`}
+        width="96"
+        height="96"
+      />
+      <div>
+        <h1>{project.name}</h1>
+        <p class="hero-tagline">{project.tagline}</p>
+        <p>{project.description}</p>
+        <div class="app-meta">
+          <span class="badge">v{project.version}</span>
+          <span class="badge badge-muted">{project.bundleId}</span>
+          {project.platforms.map((platform) => <span class="badge badge-muted">{platform}</span>)}
+        </div>
+        {
+          project.repoUrl && (
+            <p>
+              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
+                Ver repositorio en GitHub
+              </a>
+            </p>
+          )
+        }
+        {
+          project.websiteUrl && (
+            <p>
+              <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                Visitar sitio web
+              </a>
+            </p>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="detail-grid">
+      <div>
+        <div class="detail-panel">
+          <h3>Características</h3>
+          <ul class="feature-list">
+            {project.features.map((feature) => <li>{feature}</li>)}
+          </ul>
+        </div>
+        <div class="detail-panel" style="margin-top: 1.25rem;">
+          <h3>Stack técnico</h3>
+          <div class="app-meta">
+            {project.stack.map((tech) => <span class="badge badge-muted">{tech}</span>)}
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="detail-panel">
+          <h3>Descargar</h3>
+          <StoreButtons project={project} />
+        </div>
+        <div class="detail-panel" style="margin-top: 1.25rem;">
+          <h3>Legal y soporte</h3>
+          <LegalLinks project={project} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

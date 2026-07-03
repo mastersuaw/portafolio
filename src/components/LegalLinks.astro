@@ -1,0 +1,34 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const { privacy, terms, support } = project.legal;
+---
+
+<div class="legal-links">
+  <a
+    href={privacy.url}
+    target={privacy.type === 'external' ? '_blank' : undefined}
+    rel={privacy.type === 'external' ? 'noopener noreferrer' : undefined}
+  >
+    {privacy.label}
+  </a>
+  <a
+    href={terms.url}
+    target={terms.type === 'external' ? '_blank' : undefined}
+    rel={terms.type === 'external' ? 'noopener noreferrer' : undefined}
+  >
+    {terms.label}
+  </a>
+  <a
+    href={support.url}
+    target={support.type === 'external' ? '_blank' : undefined}
+    rel={support.type === 'external' ? 'noopener noreferrer' : undefined}
+  >
+    {support.label}
+  </a>
+</div>

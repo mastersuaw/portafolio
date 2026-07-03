@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '2 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Leonida Guia"
+  description="Soporte y contacto para Leonida Guia."
+>
+  <LegalContent title="Soporte" appName="Leonida Guia" appSlug="leonida-guia" updated={updated}>
+    <p>¿Necesitas ayuda con Leonida Guia? Aquí encontrarás las formas de contacto y recursos útiles.</p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Leonida Guia</li>
+      <li><strong>Versión:</strong> 0.1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> com.leonidaguide.app</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:soporte.leonidaguia@mastersuaw.dev">soporte.leonidaguia@mastersuaw.dev</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/mastersuaw/leonida-guia/issues" target="_blank" rel="noopener noreferrer">
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Es una app oficial de Rockstar?</h3>
+    <p>
+      No. Leonida Guia es una guía no oficial creada de forma independiente por mastersuaw. No está
+      afiliada a Rockstar Games ni a Take-Two Interactive.
+    </p>
+
+    <h3>¿Funciona sin conexión?</h3>
+    <p>
+      Sí, el contenido descargado previamente está disponible en modo offline. Para actualizar la
+      guía necesitas conexión a internet.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/leonida-guia/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/leonida-guia/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

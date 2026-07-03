@@ -1,0 +1,42 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const hasIos = Boolean(project.stores.ios);
+const hasAndroid = Boolean(project.stores.android);
+---
+
+<div class="store-buttons">
+  {
+    hasIos ? (
+      <a
+        href={project.stores.ios}
+        class="store-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Descargar en App Store
+      </a>
+    ) : (
+      <span class="store-btn disabled">App Store — Próximamente</span>
+    )
+  }
+  {
+    hasAndroid ? (
+      <a
+        href={project.stores.android}
+        class="store-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Descargar en Google Play
+      </a>
+    ) : (
+      <span class="store-btn disabled">Google Play — Próximamente</span>
+    )
+  }
+</div>
