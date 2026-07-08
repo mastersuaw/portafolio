@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '8 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Pensum RD"
+  description="Términos y condiciones de uso de Pensum RD."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Pensum RD"
+    appSlug="pensum-rd"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Pensum RD</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Pensum RD es una aplicación para estudiantes que permite consultar el plan de estudios (pensum)
+      de universidades y llevar el control del progreso académico personal. El servicio se proporciona
+      "tal cual" para uso personal.
+    </p>
+
+    <h2>2. Información referencial</h2>
+    <p>
+      Pensum RD es una <strong>herramienta de apoyo</strong> para estudiantes. La información de los
+      pensums es referencial y puede no reflejar cambios recientes de tu universidad.
+      <strong>Valida siempre con tu institución</strong> antes de tomar decisiones académicas.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>Puedes utilizar la aplicación para consultar pensums y registrar tu progreso personal. No está permitido:</p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+      <li>Presentar la app como fuente oficial de ninguna universidad</li>
+    </ul>
+
+    <h2>4. Modo invitado y cuenta</h2>
+    <p>
+      Puedes usar la app sin crear cuenta (modo invitado); tus datos permanecen en el dispositivo. Al
+      crear una cuenta, tu progreso puede sincronizarse en la nube. Eres responsable de mantener la
+      confidencialidad de tus credenciales.
+    </p>
+
+    <h2>5. Propiedad intelectual</h2>
+    <p>
+      Pensum RD, su diseño, código y contenido propio son propiedad de mastersuaw. Los datos de
+      pensums pertenecen a las respectivas universidades; la app los presenta con fines informativos.
+    </p>
+
+    <h2>6. Datos y responsabilidad</h2>
+    <p>
+      En modo invitado, tus datos se almacenan localmente. Con cuenta, el progreso sincronizado se
+      guarda en servidores de Supabase. Eres responsable de la exactitud del progreso que registras.
+      El desarrollador no garantiza la recuperación de datos perdidos por fallos del dispositivo o
+      desinstalación.
+    </p>
+
+    <h2>7. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos que
+      la información de pensums esté siempre actualizada ni que el servicio esté libre de errores o
+      interrupciones.
+    </p>
+
+    <h2>8. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, mastersuaw no será responsable por daños indirectos,
+      incidentales o consecuentes derivados del uso de la aplicación, incluidas decisiones académicas
+      basadas en la información mostrada.
+    </p>
+
+    <h2>9. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos o la aplicación en cualquier momento. El uso continuado tras
+      los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/pensum-rd/soporte`}>soporte</a> o escribe a
+      <a href="mailto:soporte@mipensum.app">soporte@mipensum.app</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

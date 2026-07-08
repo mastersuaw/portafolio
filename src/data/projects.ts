@@ -189,6 +189,48 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'pensum-rd',
+    name: 'Pensum RD',
+    tagline: 'Tu pensum y tu progreso académico universitario',
+    description:
+      'Aplicación nativa para estudiantes dominicanos: consulta el plan de estudios (pensum) de tu universidad y carrera, marca materias aprobadas o en curso y sigue tu progreso por créditos y cuatrimestre. Modo invitado offline o sincronización en la nube con cuenta.',
+    bundleId: 'com.mipensum.app',
+    version: '0.1.0',
+    platforms: ['iOS', 'Android'],
+    icon: `${BASE}images/apps/pensum-rd.png`,
+    features: [
+      'Consulta el pensum completo organizado por cuatrimestre',
+      'Marca cada materia como pendiente, cursando, aprobada o convalidada',
+      'Progreso total: porcentaje de créditos y cuatrimestre actual',
+      'Prerequisitos de cada materia',
+      'Funciona sin conexión: el pensum queda guardado en el dispositivo',
+      'Modo invitado sin cuenta; migración automática al registrarte',
+      'Sincronización del progreso entre dispositivos con cuenta',
+      'Selección de universidad, carrera y versión de pensum',
+      'Tema claro, oscuro o según el sistema',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Supabase', 'Next.js'],
+    repoUrl: 'https://github.com/mastersuaw/pensumrd',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-rd/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-rd/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-rd/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
