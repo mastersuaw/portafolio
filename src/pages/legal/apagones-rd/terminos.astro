@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '11 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Apagones RD"
+  description="Términos y condiciones de uso de Apagones RD."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Apagones RD"
+    appSlug="apagones-rd"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Apagones RD</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Apagones RD es una aplicación informativa para consultar el estado de circuitos eléctricos y
+      posibles zonas afectadas en República Dominicana, con base en datos públicos o publicados por
+      fuentes como CUED/EDE y, cuando aplica, reportes de la comunidad. El servicio se proporciona
+      «tal cual» para uso personal.
+    </p>
+
+    <h2>2. Información referencial</h2>
+    <p>
+      Apagones RD <strong>no es una fuente oficial</strong> de las empresas distribuidoras ni del
+      Estado. Un circuito alimenta varios sectores: la app
+      <strong>no confirma un apagón en tu domicilio</strong>. Puede haber retrasos o imprecisiones.
+      Valida siempre con canales oficiales cuando tomes decisiones importantes.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>Puedes utilizar la aplicación para informarte sobre posibles afectaciones. No está permitido:</p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+      <li>Presentar la app como canal oficial de CUED, EDE u otra entidad</li>
+      <li>Enviar reportes falsos o abusivos de forma reiterada</li>
+    </ul>
+
+    <h2>4. Reportes comunitarios</h2>
+    <p>
+      Los reportes de usuarios (por ejemplo, «tengo luz» / «no tengo luz») son aportaciones
+      voluntarias y anónimas. No reemplazan datos oficiales. El desarrollador puede moderar o limitar
+      esta función.
+    </p>
+
+    <h2>5. Propiedad intelectual</h2>
+    <p>
+      Apagones RD, su diseño, código y contenido propio son propiedad de mastersuaw. Los datos de
+      circuitos y mantenimientos pertenecen a sus respectivas fuentes; la app los presenta con fines
+      informativos.
+    </p>
+
+    <h2>6. Datos y responsabilidad</h2>
+    <p>
+      Preferencias y circuito favorito se guardan en el dispositivo. El uso de ubicación es opcional.
+      Eres responsable de las decisiones que tomes basándote en la información mostrada. El
+      desarrollador no garantiza disponibilidad continua del API ni exactitud absoluta de los datos.
+    </p>
+
+    <h2>7. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      que la información esté siempre actualizada ni que el servicio esté libre de errores o
+      interrupciones.
+    </p>
+
+    <h2>8. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, mastersuaw no será responsable por daños indirectos,
+      incidentales o consecuentes derivados del uso de la aplicación, incluidas decisiones basadas en
+      la información mostrada (por ejemplo, viajes, trabajo o seguridad personal).
+    </p>
+
+    <h2>9. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos o la aplicación en cualquier momento. El uso continuado tras
+      los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/apagones-rd/soporte`}>soporte</a> o escribe a
+      <a href="mailto:contacto@luzrd.do">contacto@luzrd.do</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

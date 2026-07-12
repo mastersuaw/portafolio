@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '11 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Apagones RD"
+  description="Soporte y contacto para Apagones RD."
+>
+  <LegalContent title="Soporte" appName="Apagones RD" appSlug="apagones-rd" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Apagones RD? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Apagones RD (Luz RD)</li>
+      <li><strong>Versión:</strong> 1.0.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> do.luzrd.apagones</li>
+      <li><strong>Plataformas:</strong> iOS, Android</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:contacto@luzrd.do">contacto@luzrd.do</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/mastersuaw/apagonesrd/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿La app confirma un apagón en mi casa?</h3>
+    <p>
+      No. Los datos son de circuitos CUED/EDE (con posible retraso) y reportes de usuarios. Un
+      circuito cubre varios sectores; la app no afirma apagón en una dirección específica.
+    </p>
+
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>
+      No. Puedes usar la app sin registro. Los reportes comunitarios usan una sesión anónima.
+    </p>
+
+    <h3>¿Por qué pide ubicación?</h3>
+    <p>
+      Para estimar tu sector y mostrar alertas o zonas cercanas. Puedes denegar el permiso y usar la
+      app eligiendo provincia, zona o circuito manualmente.
+    </p>
+
+    <h3>¿De dónde salen los datos?</h3>
+    <p>
+      Principalmente de fuentes públicas/publicadas asociadas a CUED y mantenimientos EDE, más
+      reportes voluntarios de la comunidad. No somos un canal oficial.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/apagones-rd/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/apagones-rd/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

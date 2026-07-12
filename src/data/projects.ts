@@ -231,6 +231,48 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'apagones-rd',
+    name: 'Apagones RD',
+    tagline: 'Consulta apagones y zonas afectadas en República Dominicana',
+    description:
+      'App nativa para iOS y Android que muestra el estado de circuitos eléctricos según datos CUED/EDE: mapa de zonas afectadas, reportes por circuito, historial, mantenimientos y reportes comunitarios. La información es referencial y no confirma apagón en un domicilio concreto.',
+    bundleId: 'do.luzrd.apagones',
+    version: '1.0.0',
+    platforms: ['iOS', 'Android'],
+    icon: `${BASE}images/apps/apagones-rd.png`,
+    features: [
+      'Inicio con alertas cercanas, KPIs y estado en tiempo casi real',
+      'Mapa de zonas afectadas (datos oficiales y reportes de usuarios)',
+      'Búsqueda de circuitos por código o sector',
+      'Detalle de circuito: estado, historial, tendencia mensual y mantenimientos EDE',
+      'Circuito favorito y preferencias de provincia / zona de influencia',
+      'Reportes comunitarios: ¿tienes luz en este momento?',
+      'Consejos ante apagones',
+      'Ubicación opcional para detectar sector y alertas cercanas',
+      'Disclaimer claro: no confirma apagón en una dirección específica',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Next.js', 'Supabase', 'Google Maps', 'Firebase'],
+    repoUrl: 'https://github.com/mastersuaw/apagonesrd',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/apagones-rd/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/apagones-rd/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/apagones-rd/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
