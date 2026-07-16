@@ -194,10 +194,10 @@ export const projects: Project[] = [
     name: 'Pensum RD',
     tagline: 'Tu pensum y tu progreso académico universitario',
     description:
-      'Aplicación nativa para estudiantes dominicanos: consulta el plan de estudios (pensum) de tu universidad y carrera, marca materias aprobadas o en curso y sigue tu progreso por créditos y cuatrimestre. Modo invitado offline o sincronización en la nube con cuenta.',
+      'Aplicación educativa gratuita (Education) para estudiantes dominicanos: consulta el plan de estudios (pensum) de tu universidad y carrera, marca materias aprobadas o en curso y sigue tu progreso por créditos y cuatrimestre. Disponible en App Store (iOS 17+, desarrollador Rusbel Monegro). Modo invitado offline o sincronización en la nube con cuenta.',
     bundleId: 'com.mipensum.app',
-    version: '0.1.0',
-    platforms: ['iOS', 'Android'],
+    version: '1.0',
+    platforms: ['iOS 17+', 'Android'],
     icon: `${BASE}images/apps/pensum-rd.png`,
     features: [
       'Consulta el pensum completo organizado por cuatrimestre',
@@ -212,7 +212,9 @@ export const projects: Project[] = [
     ],
     stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Supabase', 'Next.js'],
     repoUrl: 'https://github.com/mastersuaw/pensumrd',
-    stores: {},
+    stores: {
+      ios: 'https://apps.apple.com/us/app/pensum-rd/id6788668407',
+    },
     legal: {
       privacy: {
         type: 'internal',
