@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '19 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Pensum MX"
+  description="Soporte y contacto para Pensum MX."
+>
+  <LegalContent title="Soporte" appName="Pensum MX" appSlug="pensum-mx" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Pensum MX? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Pensum MX (PensumMX)</li>
+      <li><strong>Versión:</strong> 0.1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador iOS:</strong> com.mipensum.app.mx</li>
+      <li><strong>Identificador Android:</strong> com.mipensum.mexico</li>
+      <li><strong>Plataformas:</strong> iOS, Android</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:soporte@mipensum.app">soporte@mipensum.app</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/mastersuaw/pensumrd/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>
+      No. Puedes continuar como invitado y tus datos se guardan solo en tu dispositivo. Si creas una
+      cuenta más adelante, tu progreso se conserva automáticamente.
+    </p>
+
+    <h3>¿La app funciona sin internet?</h3>
+    <p>
+      Sí. Una vez descargada la malla curricular, puedes consultarla y marcar tu progreso sin
+      conexión. Para sincronizar entre dispositivos o actualizar catálogos necesitas internet.
+    </p>
+
+    <h3>¿La información del plan de estudios es oficial?</h3>
+    <p>
+      Es referencial. Pensum MX no está afiliada a ninguna universidad. Valida siempre con tu
+      institución antes de tomar decisiones académicas.
+    </p>
+
+    <h3>¿Qué universidades están disponibles?</h3>
+    <p>
+      El catálogo está orientado a universidades mexicanas (por ejemplo UNAM y más instituciones en
+      expansión). Si tu universidad no aparece, puedes solicitarla por correo o GitHub.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/pensum-mx/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/pensum-mx/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

@@ -234,6 +234,48 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: 'pensum-mx',
+    name: 'Pensum MX',
+    tagline: 'Tu malla curricular y tu progreso académico universitario',
+    description:
+      'Aplicación educativa gratuita (Education) para estudiantes mexicanos: consulta la malla curricular (plan de estudios) de tu universidad y carrera, marca materias aprobadas o en curso y sigue tu progreso por créditos y semestre. Disponible para iOS 17+ y Android (desarrollador Rusbel Monegro / mastersuaw). Modo invitado offline o sincronización en la nube con cuenta. Catálogo filtrado por México (p. ej. UNAM y más universidades en expansión).',
+    bundleId: 'com.mipensum.app.mx',
+    version: '0.1.0',
+    platforms: ['iOS 17+', 'Android'],
+    icon: `${BASE}images/apps/pensum-mx.png`,
+    features: [
+      'Consulta la malla curricular completa organizada por semestre',
+      'Marca cada materia como pendiente, cursando, aprobada o convalidada',
+      'Progreso total: porcentaje de créditos y semestre actual',
+      'Prerequisitos de cada materia',
+      'Funciona sin conexión: la malla queda guardada en el dispositivo',
+      'Modo invitado sin cuenta; migración automática al registrarte',
+      'Sincronización del progreso entre dispositivos con cuenta',
+      'Selección de universidad, carrera y versión de plan de estudios',
+      'Tema claro, oscuro o según el sistema',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Supabase', 'Next.js'],
+    repoUrl: 'https://github.com/mastersuaw/pensumrd',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-mx/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-mx/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/pensum-mx/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
+  {
     slug: 'apagones-rd',
     name: 'Apagones RD',
     tagline: 'Consulta apagones y zonas afectadas en República Dominicana',
