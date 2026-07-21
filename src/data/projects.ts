@@ -317,6 +317,46 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    slug: 'pelota-do',
+    name: 'Pelota Do',
+    tagline: 'Sigue LIDOM en vivo: portada, posiciones, resultados y estadísticas',
+    description:
+      'Apps nativas para iOS 17+ y Android para seguir la pelota invernal dominicana (LIDOM): juegos del día con actualizaciones en vivo, tabla de posiciones (temporada actual e histórico), resultados con detalle de juego y estadísticas de bateo/pitcheo (fuente MLB Stats API). Sin cuenta ni login.',
+    bundleId: 'com.pelotado.mastersuaw',
+    version: '1.0',
+    platforms: ['iOS 17+', 'Android'],
+    icon: `${BASE}images/apps/pelota-do.png`,
+    features: [
+      'Portada con juegos del día y actualizaciones en vivo por WebSocket',
+      'Tabla de posiciones en vivo e histórico embebido de temporadas anteriores',
+      'Resultados paginados, filtro por mes y detalle de juego',
+      'Estadísticas de bateo, pitcheo y equipos (MLB Stats API / MLBAM)',
+      'Caché local de estadísticas (~30 min) para menos peticiones',
+      'Tabs nativos: Portada, Posiciones, Estadísticas y Resultados',
+      'Sin cuenta ni login; datos de red solo para contenido deportivo',
+    ],
+    stack: ['SwiftUI', 'Jetpack Compose', 'Kotlin', 'Material 3', 'OkHttp'],
+    repoUrl: 'https://github.com/mastersuaw/pelotainvernal',
+    stores: {},
+    legal: {
+      privacy: {
+        type: 'internal',
+        url: `${BASE}legal/pelota-do/privacidad`,
+        label: 'Política de privacidad',
+      },
+      terms: {
+        type: 'internal',
+        url: `${BASE}legal/pelota-do/terminos`,
+        label: 'Términos y condiciones',
+      },
+      support: {
+        type: 'internal',
+        url: `${BASE}legal/pelota-do/soporte`,
+        label: 'Soporte',
+      },
+    },
+  },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

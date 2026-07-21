@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '21 de julio de 2026';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Soporte — Pelota Do"
+  description="Soporte y contacto para Pelota Do."
+>
+  <LegalContent title="Soporte" appName="Pelota Do" appSlug="pelota-do" updated={updated}>
+    <p>
+      ¿Necesitas ayuda con Pelota Do? Aquí encontrarás las formas de contacto y recursos útiles.
+    </p>
+
+    <h2>Información de la aplicación</h2>
+    <ul>
+      <li><strong>Nombre:</strong> Pelota Do</li>
+      <li><strong>Versión:</strong> 1.0</li>
+      <li><strong>Desarrollador:</strong> mastersuaw</li>
+      <li><strong>Identificador:</strong> com.pelotado.mastersuaw</li>
+      <li><strong>Plataformas:</strong> iOS 17+, Android</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <div class="support-card">
+      <p>
+        <strong>Correo de soporte:</strong>
+        <a href="mailto:soporte.pelotado@mastersuaw.dev">soporte.pelotado@mastersuaw.dev</a>
+      </p>
+      <p>
+        <strong>GitHub:</strong>
+        <a
+          href="https://github.com/mastersuaw/pelotainvernal/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reportar un problema
+        </a>
+      </p>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito crear una cuenta?</h3>
+    <p>No. Pelota Do funciona sin registro ni inicio de sesión.</p>
+
+    <h3>¿La app es oficial de LIDOM?</h3>
+    <p>
+      No. Es una app independiente para seguir partidos y estadísticas. No estamos afiliados a
+      LIDOM, MLB ni a pelotainvernal.com.
+    </p>
+
+    <h3>¿De dónde salen los datos?</h3>
+    <p>
+      Portada, posiciones y resultados se obtienen de fuentes públicas asociadas a pelotainvernal.com
+      (incluyendo actualizaciones en vivo). Las estadísticas de bateo/pitcheo usan la MLB Stats API
+      (MLBAM), con atribución en la app.
+    </p>
+
+    <h3>¿Por qué a veces no hay datos en vivo?</h3>
+    <p>
+      Dependes de la disponibilidad de las fuentes externas y de tu conexión. Si el sitio o el
+      WebSocket no responden, la app puede mostrar error o datos en caché hasta que puedas
+      actualizar.
+    </p>
+
+    <h3>Enlaces legales</h3>
+    <ul>
+      <li><a href={`${base}legal/pelota-do/privacidad`}>Política de privacidad</a></li>
+      <li><a href={`${base}legal/pelota-do/terminos`}>Términos y condiciones</a></li>
+    </ul>
+  </LegalContent>
+</BaseLayout>

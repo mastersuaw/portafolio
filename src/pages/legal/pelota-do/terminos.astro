@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '21 de julio de 2026';
+---
+
+<BaseLayout
+  title="Términos y condiciones — Pelota Do"
+  description="Términos y condiciones de uso de Pelota Do."
+>
+  <LegalContent
+    title="Términos y condiciones"
+    appName="Pelota Do"
+    appSlug="pelota-do"
+    updated={updated}
+  >
+    <p>
+      Al descargar o utilizar <strong>Pelota Do</strong>, aceptas los siguientes términos y
+      condiciones.
+    </p>
+
+    <h2>1. Descripción del servicio</h2>
+    <p>
+      Pelota Do es una aplicación informativa para seguir la temporada de pelota invernal
+      dominicana (LIDOM): portada con juegos en vivo, posiciones, resultados y estadísticas. El
+      servicio se proporciona «tal cual» para uso personal.
+    </p>
+
+    <h2>2. Información referencial y afiliación</h2>
+    <p>
+      Pelota Do <strong>no es una app oficial</strong> de LIDOM, MLB, MLBAM ni de pelotainvernal.com.
+      Los datos deportivos pueden tener retrasos o imprecisiones. Las marcas, logos y estadísticas
+      de terceros pertenecen a sus respectivos titulares; en estadísticas se muestra atribución a
+      MLB / MLBAM cuando corresponde.
+    </p>
+
+    <h2>3. Uso permitido</h2>
+    <p>Puedes utilizar la aplicación para informarte sobre partidos y estadísticas. No está permitido:</p>
+    <ul>
+      <li>Modificar, descompilar o realizar ingeniería inversa de la aplicación</li>
+      <li>Utilizar la app con fines ilegales o que infrinjan derechos de terceros</li>
+      <li>Redistribuir la aplicación sin autorización del desarrollador</li>
+      <li>Presentar la app como canal oficial de LIDOM, MLB u otra entidad</li>
+      <li>Abusar de las APIs o fuentes de datos (p. ej. scraping masivo a través de la app)</li>
+    </ul>
+
+    <h2>4. Propiedad intelectual</h2>
+    <p>
+      Pelota Do, su diseño y código propio son propiedad de mastersuaw. El contenido deportivo y las
+      marcas de equipos/ligas pertenecen a sus respectivos titulares.
+    </p>
+
+    <h2>5. Datos y responsabilidad</h2>
+    <p>
+      No se requiere cuenta. La app puede cachear temporalmente datos en el dispositivo. Eres
+      responsable de las decisiones que tomes basándote en la información mostrada. El desarrollador
+      no garantiza disponibilidad continua de las fuentes externas ni exactitud absoluta.
+    </p>
+
+    <h2>6. Exclusión de garantías</h2>
+    <p>
+      La aplicación se ofrece sin garantías de ningún tipo, expresas o implícitas. No garantizamos
+      que la información esté siempre actualizada ni que el servicio esté libre de errores o
+      interrupciones.
+    </p>
+
+    <h2>7. Limitación de responsabilidad</h2>
+    <p>
+      En la máxima medida permitida por la ley, mastersuaw no será responsable por daños indirectos,
+      incidentales o consecuentes derivados del uso de la aplicación, incluidas decisiones basadas
+      en resultados o estadísticas mostradas.
+    </p>
+
+    <h2>8. Modificaciones</h2>
+    <p>
+      Podemos actualizar estos términos o la aplicación en cualquier momento. El uso continuado tras
+      los cambios implica la aceptación de los nuevos términos.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      Para consultas, visita la página de
+      <a href={`${import.meta.env.BASE_URL}legal/pelota-do/soporte`}>soporte</a> o escribe a
+      <a href="mailto:soporte.pelotado@mastersuaw.dev">soporte.pelotado@mastersuaw.dev</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LegalContent from '../../../components/LegalContent.astro';
+
+const updated = '21 de julio de 2026';
+---
+
+<BaseLayout
+  title="Política de privacidad — Pelota Do"
+  description="Política de privacidad de Pelota Do, app para seguir LIDOM en iOS y Android."
+>
+  <LegalContent
+    title="Política de privacidad"
+    appName="Pelota Do"
+    appSlug="pelota-do"
+    updated={updated}
+  >
+    <p>
+      Esta política describe cómo <strong>Pelota Do</strong> (desarrollada por mastersuaw) trata la
+      información cuando utilizas la aplicación.
+    </p>
+
+    <h2>1. Responsable</h2>
+    <p>
+      Desarrollador: <strong>mastersuaw</strong><br />
+      Aplicación: Pelota Do<br />
+      Identificador: com.pelotado.mastersuaw
+    </p>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>
+      Pelota Do <strong>no requiere cuenta ni registro</strong>. La aplicación no solicita nombre,
+      correo electrónico ni datos de identificación personal.
+    </p>
+    <p>En el dispositivo pueden guardarse de forma local:</p>
+    <ul>
+      <li>Caché temporal de estadísticas deportivas (para reducir peticiones de red)</li>
+      <li>Preferencias de la interfaz si las hubiera</li>
+    </ul>
+
+    <h2>3. Datos de red (contenido deportivo)</h2>
+    <p>
+      Para mostrar resultados, posiciones y estadísticas, la app consulta servicios de terceros:
+    </p>
+    <ul>
+      <li>
+        Contenido de partidos y tablas asociado a
+        <a href="https://pelotainvernal.com/" target="_blank" rel="noopener noreferrer"
+          >pelotainvernal.com</a
+        >
+        (HTTP/HTTPS y WebSocket en vivo)
+      </li>
+      <li>
+        Estadísticas de LIDOM vía <strong>MLB Stats API / MLBAM</strong> (misma fuente referencial
+        que el portal oficial de estadísticas LIDOM)
+      </li>
+    </ul>
+    <p>
+      Esas peticiones pueden incluir datos técnicos habituales de red (por ejemplo User-Agent de la
+      app). El desarrollador no opera un backend propio que almacene perfiles de usuario.
+    </p>
+
+    <h2>4. Datos que no recopilamos</h2>
+    <ul>
+      <li>No recopilamos nombre, correo ni identificadores personales</li>
+      <li>No utilizamos publicidad ni analítica de terceros integrada en la app</li>
+      <li>No vendemos ni compartimos datos personales con terceros</li>
+    </ul>
+
+    <h2>5. Servicios de terceros</h2>
+    <p>
+      Los proveedores de contenido deportivo (pelotainvernal.com, MLB/MLBAM) tratan la información
+      según sus propias políticas. Pelota Do no está afiliada a LIDOM, MLB ni a esos sitios.
+    </p>
+
+    <h2>6. Conservación</h2>
+    <p>
+      La caché local se elimina o caduca en el dispositivo (p. ej. estadísticas ~30 minutos) o al
+      desinstalar la app, salvo copias de seguridad gestionadas por el sistema operativo.
+    </p>
+
+    <h2>7. Menores de edad</h2>
+    <p>
+      La app no está dirigida específicamente a menores de 13 años y no recopila conscientemente
+      datos personales de ningún usuario.
+    </p>
+
+    <h2>8. Cambios a esta política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. La fecha de la última actualización se
+      indica al inicio de este documento.
+    </p>
+
+    <h2>9. Contacto</h2>
+    <p>
+      Para consultas sobre privacidad, escribe a
+      <a href="mailto:soporte.pelotado@mastersuaw.dev">soporte.pelotado@mastersuaw.dev</a> o visita
+      la página de
+      <a href={`${import.meta.env.BASE_URL}legal/pelota-do/soporte`}>soporte de Pelota Do</a>.
+    </p>
+  </LegalContent>
+</BaseLayout>
